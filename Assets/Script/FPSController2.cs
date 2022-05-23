@@ -86,8 +86,6 @@ public class FPSController2 : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.E))
         {
         	move = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
-
-            //Move the direction of the character according with the camera direction and the keys
         	move = transform.TransformDirection(move) * run;
         }
     }
