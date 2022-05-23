@@ -10,7 +10,7 @@ public class FPSController2 : MonoBehaviour
     public float walk = 5.0f,
                  jump = 7.0f,
                  gravity = 22.0f,
-                 run = 7.0f;
+                 runSpeed = 7.0f;
 
     //Camera variables
     public Camera cam;
@@ -65,8 +65,13 @@ public class FPSController2 : MonoBehaviour
             move = transform.TransformDirection(move) * walk;
 
             jumping();
-            running();
+            
         }
+
+         if (Input.GetKey(KeyCode.LeftShift))
+            {
+                move = transform.TransformDirection(move) * runSpeed;
+            }
 
         //Getting the move.y value and increasing the value per time
         move.y -= gravity * Time.deltaTime;
@@ -81,14 +86,7 @@ public class FPSController2 : MonoBehaviour
             move.y = jump;
     }
 
-    public void running()
-    {
-        if(Input.GetKeyDown(KeyCode.E))
-        {
-        	move = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
-        	move = transform.TransformDirection(move) * run;
-        }
-    }
+    
 
 
 }
