@@ -83,7 +83,7 @@ public class FPSController2 : MonoBehaviour
 
     public void running()
     {
-        if(Input.GetKey(Input.GetKeyDown(KeyCode.E))
+        if(Input.GetKeyDown(KeyCode.E))
         {
         	move = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
 
