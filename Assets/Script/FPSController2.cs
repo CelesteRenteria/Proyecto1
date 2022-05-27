@@ -52,6 +52,9 @@ public class FPSController2 : MonoBehaviour
         transform.Rotate(0, h_mouse, 0); //y
     }
 
+
+    
+
     public void movements()
     {
         //Verify if the character is in the ground or not
